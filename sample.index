@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<meta name="description" content="Webpage">
+		<link href="stylesheet.css" rel="stylesheet">
+
+		<script src="jquery.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<h1>Prime Fruit Market</h1>
+
+		<div class="fruitContainer">
+
+
+
+		<div class="fruits">
+			<h3>Apple</h3>
+			<img src="fruit-pics\apple.jpg" alt="appleItem" />
+			<div class="buyButton">
+				<button id="buyApple">BUY</button>
+				<button id="sellApple">SELL</button>
+					<span class="averagePrice" id="apple">Current Apple Cost: $5.00</span>
+			</div>
+		</div>
+
+		<div class="fruits">
+			<h3>Orange</h3>
+			<img src="fruit-pics\oranges.jpg" alt="orangeItem" />
+			<div class="buyButton">
+				<button id="buyOrange">BUY</button>
+				<button id="sellOrange">SELL</button>
+					<span class="averagePrice" id="orange">Current Apple Cost: $5.00</span>
+			</div>
+		</div>
+
+		<div class="fruits">
+			<h3>Grapes</h3>
+			<img src="fruit-pics\grapes.png" alt="grapeItem" />
+			<div class="buyButton">
+				<button id="buyGrapes">BUY</button>
+				<button id="sellGrapes">SELL</button>
+					<span class="averagePrice" id="grapes">Current Apple Cost: $5.00</span>
+			</div>
+		</div>
+
+		<div class="fruits">
+			<h3>Orange</h3>
+			<img src="fruit-pics\bananas.jpg" alt="bananaItem" />
+			<div class="buyButton">
+				<button id="buyBanana">BUY</button>
+				<button id="sellBanana">SELL</button>
+					<span class="averagePrice" id="orange">Current Apple Cost: $5.00</span>
+			</div>
+
+		</div>
+
+		<div class="stats">
+			<div class="box">
+				<div class="appleavgcost">Average apple cost: 0</div>
+			</div>
+			<div class="box">
+				<div class="orangeavgcost">Average orange cost: 0</div>
+			</div>
+			<div class="box">
+				<div class="bananaavgcost">Average banana cost: 0</div>
+			</div>
+			<div class="box">
+				<div class="pearavgcost">Average pear cost: 0</div>
+			</div>
+		</div>
+
+		<div class="cashbox">
+			<h3 class="cash">Total Available Cash: $100</h3>
+		</div>
+	</div>
+
+</div>
+		<div id="fruitPrice"></div>
+
+
+	</body>
+</html>

@@ -1,0 +1,35 @@
+body{
+  background-color: #F0FFFF;
+  font-style: Helvetica;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.fruitContainer {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.fruits {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+  width: auto;
+}
+
+ul {
+  list-style: none;
+}
+li{
+  font-size: 20px;
+
+}
