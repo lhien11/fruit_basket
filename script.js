@@ -1,7 +1,32 @@
+//Create Customer object for "current user"
+var Customer = {
+    //Keep track of user's total cash
+	totalCash: 100,
+	//Create property for the number of fruits the user has purchased
+    //Set initial value to 0
+    apple: 0,
+	orange: 0,
+	banana: 0,
+	pear: 0,
+    //Create property for the total amount spent per each type of fruit
+    //Set initial value to 0
+	applesCost: 0,
+	orangesCost: 0,
+	bananasCost: 0,
+	pearsCost: 0,
+    //Create property for the average amount spent per each type of fruit
+    //Set initial value to 0
+	applesAverage: 0,
+	orangesAverage: 0,
+	bananasAverage: 0,
+	pearsAverage: 0
+};
 
-var totalCash = 100;
 
 $(function(){
+	var totalCash = 100.00;
+	//totalCash = precise_round(totalCash, 2);
+
 	$('#totalCash').text('$'+totalCash);
 
 	var marketObject = {
@@ -16,31 +41,29 @@ $(function(){
 		$("#"+fruit+"Price").text('$'+marketObject[fruit]);
 	}
 
-
-
-
-	// // Run every 15 seconds
-	// setInterval(function(){
-	// 	// Loop through each property in the marketObject
-	// 	for(var fruit in Market){
-	// 		$("#"+fruit+"Price").text('$'+marketObject[fruit]);
-	// 	}
-	// }, 500);
+	setInterval(function(){
+		// Loop through each property in the marketObject
+		for(var fruit in marketObject){
+			marketObject[fruit] = randomChange(marketObject[fruit]);
+			$("#"+fruit+"Price").text('$'+marketObject[fruit]);
+		}
+	}, 1500);
 
 	//Find new price based on randomly generated change in price
+	//randomChange(marketObject.apple);
 	function randomChange(price) {
-		console.log("First Price ",price);
+		//console.log("First Price ",price);
 		//Generate a random number between -50 and 50
 	    var num = randomNumber (-25, 25);
-		console.log("num is ", num);
+		//console.log("num is ", num);
 		num /= 100;
 		//Divide random number by 100 to get $ value
-	    console.log("num is " + num);
+	    //console.log("num is " + num);
 		//Add randomly generated change in price to current price
 	    price += num;
 	    //Round new price to 2 decimal points
 	    price = precise_round(price, 2);
-		console.log("price is " + price);
+		//console.log("price is " + price);
 		//If price is less than minimum (50 cents), set to minimum
 	    if (price < 0.50) {
 			price = 0.50;
@@ -48,7 +71,7 @@ $(function(){
 	    } else if (price > 9.99) {
 			price = 9.99;
 		}
-		console.log("The new price is " + price);
+		//console.log("The new price is " + price);
 		return price;
 	}
 
